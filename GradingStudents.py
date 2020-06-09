@@ -4,25 +4,13 @@ import sys
 
 
 def gradingStudents(grades):
-    if len(grades) >= 1 and len(grades) <= 60:
-        outputList = []
-        for grade in range(len(grades)):
-            if int(grades[grade])>=0 and int(grades[grade]) <=100:
-                if int(grades[grade]) < 38:
-                    outputList.append(grades[grade])
-                else:
-                    if int(grades[grade]) >= 10:
-                        numberFinal = grades[grade] % 10
-                        if numberFinal == 4 or numberFinal == 9:
-                            numberFinal = int(grades[grade]) + 1
-                            outputList.append(int(numberFinal))
-                        elif numberFinal == 3 or numberFinal == 8:
-                            numberFinal = int(grades[grade]) + 2
-                            outputList.append(int(numberFinal))
-                        else:
-                            outputList.append(grades[grade])
-                    else:
-                        outputList.append(grades[grade])
+    outputList = []
+    for a0 in range(len(grades)):
+        x = int(grades[a0])
+        if x >= 38:
+            if x % 5 > 2:
+                while x % 5 != 0: x += 1
+        outputList.append(x)
     return outputList
 
 
