@@ -12,3 +12,4 @@ if __name__ == '__main__':
     height_of_candle = [3, 2, 1, 3]
     result = birthdayCakeCandles(height_of_candle)
     #print(str(result) + '\n')
+ 
